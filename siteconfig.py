@@ -4,7 +4,7 @@ _basedir = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = False
 
-DATABASE_URI=""
+DATABASE=""
 SECRET_KEY="home video"
 USERNAME="admin"
 PASSWORD="default"
