@@ -1,11 +1,22 @@
 {% extends "layout.html" %}
 
-{% block title %} New title {% endblock %}
+{% block title %} Video and audio home archive {% endblock %}
 
 {% block head %}
     {{ super() }}
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
-<h1> Hello bootsrap in templates! </h1>
+    <div class="container theme-showcase">
+        <div class="jumbotron">
+            <h1>VidArc - это удобно!</h1>
+            <p>Этот инструмент помогает систематизировать домашнюю коллекцию музыки и фильмов. Также
+                некоторым образом автоматизирует процесс скачивания фильмов и музыки с ряда сайтов.</p>
+        </div>
+    </div>
 {% endblock %}

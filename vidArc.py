@@ -3,6 +3,7 @@ from flask import render_template
 from flask import g
 
 from views import general
+import sqlite3
 
 app = Flask(__name__)
 app.config.from_object("siteconfig")
@@ -13,22 +14,21 @@ def connect_db():
     return rw
 
 def init_db():
-    db = get_db()
-    with app.open_resource("schema.sql", mode="r") as f:
-        db.cursor().executescript(f.read())
-    db.commit()
+    with app.app_context():
+        db = get_db()
+        with app.open_resource("schema.sql", mode="r") as f:
+            db.cursor().executescript(f.read())
+        db.commit()
 
 def get_db():
-    db = getattr(g, "_database", None)
-    if db is None:
-	db = g._database = connect_db()
-    return db
+    if not hasattr(g, "_database"):
+        g._database = connect_db()
+    return g._database
 
 @app.teardown_appcontext
 def close_connection(exception):
-    db = getattr(g, "_database", None)
-    if db is not None:
-	db.close();
+    if hasattr(g, "_database"):
+        g._database.close()
 
 @app.errorhandler(404)
 def not_found(error):
