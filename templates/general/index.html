@@ -4,19 +4,17 @@
 
 {% block head %}
     {{ super() }}
-    <style>
-        .container {
-            margin-top: 20px;
-        }
-    </style>
+    <link href="{{ url_for('static', filename='css/film.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
-    <div class="container theme-showcase">
-        <div class="jumbotron">
-            <h1>VidArc - это удобно!</h1>
-            <p>Этот инструмент помогает систематизировать домашнюю коллекцию музыки и фильмов. Также
-                некоторым образом автоматизирует процесс скачивания фильмов и музыки с ряда сайтов.</p>
-        </div>
-    </div>
+    <h2>Последние обновления</h2>
+    <article class="film">
+        <figure class="film-poster"><img src="" width="150" height="210" alt="poster"></figure>
+        <h3 class="film-title">Hello world 1</h3>
+        <section class="film-director">Igor Tkachev</section>
+        <section class="film-short">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </section>
+    </article>
 {% endblock %}

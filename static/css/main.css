@@ -1,0 +1,19 @@
+*{
+    border: 1px solid darkred;
+}
+.box {
+    width: 680px;
+    margin: 20px auto;
+}
+
+header {
+    margin-top: 20px;
+}
+nav .main-menu {
+   list-style: none;
+}
+
+nav .main-menu li {
+    display: block;
+    margin: 0 20px;
+}

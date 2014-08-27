@@ -2,17 +2,31 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
     {% block head %}
         <title>{% block title %}{% endblock %}</title>
     {% endblock %}
 </head>
 <body>
-{% block body %}{% endblock %}
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <div class="box">
+    <header>
+        {% block header %}<h1>VidArc - это удобно!</h1>
+        <p>Этот инструмент помогает систематизировать домашнюю коллекцию музыки и фильмов. Также
+            некоторым образом автоматизирует процесс скачивания фильмов и музыки с ряда сайтов.</p>
+        {% endblock %}
+    </header>
+    <nav>
+        {% block nav %}
+        <ul class="main-menu">
+            <li>[<a href="#">Главная</a>]</li>
+            <li>[<a href="#">Фильмы</a>]</li>
+            <li>[<a href="#">Музыка</a>]</li>
+            <li>[<a href="#">Скачать</a>]</li>
+        </ul>
+        {% endblock %}
+    </nav>
+    <main>{% block body %}{% endblock %}</main>
+    <footer>{% block footer %}{% endblock %}</footer>
+    </div>
 </body>
 </html>
