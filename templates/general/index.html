@@ -10,11 +10,17 @@
 {% block body %}
     <h2>Последние обновления</h2>
     <article class="film">
-        <figure class="film-poster"><img src="" width="150" height="210" alt="poster"></figure>
-        <h3 class="film-title">Hello world 1</h3>
-        <section class="film-director">Igor Tkachev</section>
-        <section class="film-short">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-        </section>
+        <h3 class="film-title">Первый мститель: Другая война</h3>
+        <div class="film-main">
+            <figure class="film-poster"><img src="{{ url_for('static', filename='img/23866_large.jpg') }}" width="150" height="210" alt="poster"></figure>
+            <section class="film-info">
+                <div class="film-info-key">Режиссер: <span class="film-info-value">Igor Tkachev</span></div>
+            </section>
+            <section class="film-short">
+                <h4>Описание</h4>
+                <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </span>
+            </section>
+        </div>
     </article>
 {% endblock %}

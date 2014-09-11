@@ -1,0 +1,44 @@
+.film {
+    font: 17px arial;
+    line-height: 27px;
+    color: rgba(0,0,0,.9);
+}
+
+.film-main {
+    padding: 20px;
+    background: #dddddd;
+}
+
+.film-short {
+
+}
+
+.film-short h4 {
+    margin-bottom: 5px;
+}
+
+.film-title {
+    font: bold 27px arial;
+    margin: 20px 30px;
+}
+
+.film-info {
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.film-info-key {
+    display: inline;
+    font: bold 13px arial;
+}
+
+.film-info-value {
+    font-weight: normal;
+}
+
+.film-poster {
+    display: inline-block;
+    float: left;
+    margin: 10px;
+    margin-right: 30px;
+}
