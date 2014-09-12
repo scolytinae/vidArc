@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    FilmFilmFilm
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/film.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body%}
+    <article class="film">
+        <h3 class="film-title">{{ film.title }}</h3>
+        <div class="film-main">
+            <figure class="film-poster"><img src="{{ url_for('static', filename='img/23866_large.jpg') }}" width="150" height="210" alt="poster"></figure>
+            <ul class="film-info">
+                <li class="film-info-item"><span class="film-info-key">Режиссер: </span><span class="film-info-value">{{ film.director }}</span></li>
+            </ul>
+            <section class="film-story">
+                <h4>Описание</h4>
+                <span>{{ film.story }}</span>
+            </section>
+        </div>
+    </article>
+{% endblock %}

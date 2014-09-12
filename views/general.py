@@ -12,4 +12,5 @@ def film_list():
 
 @mod.route("/films/<string:film_page>")
 def film(film_page):
-    return render_template("general/film.html")
+    f = {'title': 'hello', 'director': 'Tkachev Igor', 'story': 'asdfasdfasdfasdasdfasdfasdfasdfas asdfasdfas'}
+    return render_template("general/film.html", film=f)

@@ -2,7 +2,7 @@ from flask import Flask
 from flask import render_template
 from flask import g
 
-from views import general
+from views import general, downloadFilm
 import sqlite3
 
 app = Flask(__name__)
@@ -40,3 +40,4 @@ def not_found(error):
     return render_template("404.html"), 404
 
 app.register_blueprint(general.mod)
+app.register_blueprint(downloadFilm.mod)

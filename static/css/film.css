@@ -5,12 +5,8 @@
 }
 
 .film-main {
-    padding: 20px;
+    padding: 40px;
     background: #dddddd;
-}
-
-.film-short {
-
 }
 
 .film-short h4 {
@@ -23,12 +19,11 @@
 }
 
 .film-info {
-    overflow: hidden;
     padding-top: 10px;
+    list-style: none;
 }
 
 .film-info-key {
-    display: inline;
     font: bold 13px arial;
 }
 
@@ -37,8 +32,9 @@
 }
 
 .film-poster {
-    display: inline-block;
     float: left;
-    margin: 10px;
+    width: 150px;
+    height: 210px;
+    margin: 0px;
     margin-right: 30px;
 }
