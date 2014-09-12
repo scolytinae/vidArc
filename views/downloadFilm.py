@@ -4,11 +4,13 @@ from flask import render_template
 
 mod = Blueprint("downloadFilm", __name__)
 
+
 @mod.route('/download')
 def download():
     return render_template("download_film/index.html")
 
+
 @mod.route("/download/film")
-def downloadFilm():
+def download_film():
     if request.method == "GET":
         return render_template("download_film/index.html")

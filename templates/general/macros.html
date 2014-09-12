@@ -1,0 +1,16 @@
+{% macro film(f) %}
+    <article class="film">
+        <h3 class="film-title">{{ f.title }}</h3>
+        <div class="film-main">
+            <figure class="film-poster"><img src="{{ url_for('static', filename='img/23866_large.jpg') }}" width="150" height="210" alt="poster"></figure>
+            <ul class="film-info">
+                <li class="film-info-item"><span class="film-info-key">Режиссер: </span><span class="film-info-value">{{ f.director }}</span></li>
+            </ul>
+            <section class="film-story">
+                <h4>Описание</h4>
+                <span>{{ f.story }}</span>
+            </section>
+        </div>
+    </article>
+{% endmacro %}
+
