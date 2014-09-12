@@ -2,6 +2,12 @@
     /*border: 1px solid darkred;
 */}
 
+.clear-fix:after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
 .box {
     width: 680px;
     margin: 20px auto;

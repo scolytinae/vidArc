@@ -7,7 +7,7 @@ LOREM_IPSUM = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed dia
 
 FILMS = [
     {'title': u'Первый мститель: Другая война', 'director': 'Tkachev Igor', 'story': LOREM_IPSUM},
-    {'title': 'hello2', 'director': 'Tkachev Igor', 'story': LOREM_IPSUM}
+    {'title': 'hello2', 'director': 'Tkachev Igor', 'story': 'hello world'}
 ]
 
 
