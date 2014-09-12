@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    All films!
-</body>
-</html>
+{% extends "layout.html" %}
+{% import "general/macros.html" as m %}
+
+{% block head %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/film.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body%}
+    {% for film in films %}
+        {{ m.film(film) }}
+    {% endfor %}
+{% endblock %}
