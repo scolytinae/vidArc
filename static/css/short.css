@@ -8,15 +8,22 @@
     margin-top: 25px;
 }
 
-.short .short-delete {
+.short .short-btn {
     position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
 }
 
 .short .short-get {
-    position: absolute;
+    right: 5px;
+}
+
+.short .short-delete {
+    right: 45px;
 }
 
 .short .short-title {
-    line-height: 30px;
+    line-height: 40px;
     margin-left: 60px;
 }

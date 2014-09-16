@@ -1,5 +1,5 @@
 .film {
-    font: 17px arial;
+    font: 17px arial, sans-serif;
     line-height: 27px;
     color: rgba(0,0,0,.9);
 }
@@ -14,8 +14,8 @@
 }
 
 .film-title {
-    font: bold 27px arial;
-    margin: 20px 0px 5px 40px;
+    font: 27px arial, sans-serif;
+    margin: 20px 0px 15px 40px;
 }
 
 .film-info {

@@ -9,6 +9,7 @@
 
 header {
     margin-top: 20px;
+    height: 100px;
 }
 
 nav .main-menu {
@@ -19,6 +20,25 @@ nav .main-menu {
 nav .main-menu li {
     display: inline-block;
     margin-right: 70px;
+}
+
+nav .main-menu li:last-of-type {
+    margin-right: 0;
+}
+
+nav .main-menu a {
+    text-decoration: none;
+    font: 17px arial, sans-serif;
+    color: rgba(0, 0, 0, .9);
+}
+
+nav .main-menu a:hover {
+    color: rgba(120, 100, 30, .9);
+}
+
+nav .main-menu .a-text {
+    font-style: italic;
+    margin: 0 5px;
 }
 
 .last-updates {
@@ -37,5 +57,6 @@ nav .main-menu li {
     left: 250px;
     padding-bottom: -15px;
     margin: 0 auto;
+    font-style: italic;
     background: #ffffff;
 }

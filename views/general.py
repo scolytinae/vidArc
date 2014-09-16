@@ -3,7 +3,7 @@ from flask import Blueprint, render_template
 
 mod = Blueprint("general", __name__)
 
-LOREM_IPSUM = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+LOREM_IPSUM = u"После беспрецедентных событий, впервые собравших вместе команду Мстителей, Стив Роджерс, известный также как Капитан Америка, оседает в Вашингтоне и пытается приспособиться к жизни в современном мире. Но покой этому герою только снится — пытаясь помочь коллеге из агентства Щ. И. Т, Стив оказывается в центре событий, грозящих катастрофой мирового масштаба. Для того, чтобы разоблачить злодейский заговор, Капитан Америка объединяется с Черной вдовой. К ним также присоединяется новый соратник, известный как Сокол, однако никто из них даже не подозревает, на что способен новый враг."
 
 FILMS = [
     {'title': u'Первый мститель: Другая война', 'director': 'Tkachev Igor', 'story': LOREM_IPSUM, 'href': 'films/1'},
