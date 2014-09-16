@@ -26,3 +26,22 @@ nav .main-menu li {
     display: inline-block;
     margin-right: 70px;
 }
+
+.last-updates {
+    margin-top: 25px;
+    border-top: 1px solid black;
+    position: relative;
+}
+
+.last-updates h2 {
+    line-height: 10px;
+    vertical-align: center;
+    position: absolute;
+    display: block;
+    padding: 0 10px;
+    top: -5px;
+    left: 250px;
+    padding-bottom: -15px;
+    margin: 0 auto;
+    background: #ffffff;
+}

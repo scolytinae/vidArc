@@ -14,3 +14,12 @@
     </article>
 {% endmacro %}
 
+{% macro short(item) %}
+    <div class="short">
+        <span class="short-type">{{ item.type }}</span>|
+        <a class="short-title" href="{{ item.href }}">{{ item.title }}</a>
+        <button class="short-delete"></button>
+        <button class="short-get"></button>
+    </div>
+{% endmacro %}
+

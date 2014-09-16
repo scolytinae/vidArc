@@ -7,7 +7,7 @@ create table films(
   director text,
   filename text not null,
   torrent_file text not null,
-  page_name text not null
+  href text not null
 );
 
 

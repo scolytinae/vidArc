@@ -1,0 +1,22 @@
+.short {
+    margin-top: 10px;
+    position: relative;
+    background: #dddddd;
+}
+
+.short:first-of-type {
+    margin-top: 25px;
+}
+
+.short .short-delete {
+    position: absolute;
+}
+
+.short .short-get {
+    position: absolute;
+}
+
+.short .short-title {
+    line-height: 30px;
+    margin-left: 60px;
+}

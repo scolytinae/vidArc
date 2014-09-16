@@ -5,12 +5,14 @@
 
 {% block head %}
     {{ super() }}
-    <link href="{{ url_for('static', filename='css/film.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/short.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
-    <h2>Последние обновления</h2>
+    <div class="last-updates">
+    <h2>последние обновления</h2>
     {% for item in items %}
-        {{ m.film(item) }}
+        {{ m.short(item) }}
     {% endfor %}
+    </div>
 {% endblock %}
