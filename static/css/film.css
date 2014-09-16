@@ -13,10 +13,6 @@
     background: #dddddd;
 }
 
-.film-short h4 {
-    margin-bottom: 5px;
-}
-
 .film-title {
     font: bold 27px arial;
     margin: 20px 0px 5px 40px;
@@ -26,6 +22,11 @@
     padding-top: 10px;
     list-style: none;
     font-size: 13px;
+}
+
+.film-story-head {
+    margin: 10px 10px;
+    font: 21px arial;
 }
 
 .film-info-key {

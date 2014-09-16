@@ -32,3 +32,9 @@ img {
 p {
     margin: 1em 0;
 }
+
+.clear-fix:after{
+    content:'';
+    display:table;
+    clear:both;
+}
