@@ -17,19 +17,20 @@
         {% endblock %}
     </header>
     <nav>
-        {% block nav %}
+        {% set navigation_bar = [
+            ('/', 'index', 'Главная'),
+            ('/films', 'films', 'Фильмы'),
+            ('/music', 'music', 'Музыка'),
+            ('/download', 'download', 'Скачать')
+        ] %}
+
         <ul class="main-menu">
-            <li>
-                <a href="/">[<span class="a-text">Главная</span>]</a>
-            </li><li>
-                <a href="/films">[<span class="a-text">Фильмы</span>]</a>
-            </li><li>
-                <a href="#">[<span class="a-text">Музыка</span>]</a>
-            </li><li>
-                <a href="/download">[<span class="a-text">Скачать</span>]</a>
-            </li>
+            {% for href, id, caption in navigation_bar %}
+                <li {% if id == active_page %} class="active"{% endif %}>
+                    <a href="{{ href|e }}">[<span class="a-text">{{ caption|e }}</span>]</a>
+                </li>
+            {% endfor %}
         </ul>
-        {% endblock %}
     </nav>
     <main>{% block body %}{% endblock %}</main>
     <footer>{% block footer %}{% endblock %}</footer>
