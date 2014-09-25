@@ -1,11 +1,19 @@
 .short {
+    display: block;
+    text-decoration: none;
     margin-top: 10px;
     position: relative;
-    background: #dddddd;
+    color: inherit;
+    font: normal 17px arial, sans-serif;
 }
 
 .short:first-of-type {
     margin-top: 25px;
+}
+
+.short:hover {
+    background: #dddddd;
+    box-shadow: 0px 0px 5px rgba(150, 150, 150, 0.7);
 }
 
 .short .short-btn {
@@ -23,7 +31,16 @@
     right: 45px;
 }
 
-.short .short-title {
+.short .short-type {
+    display: inline-block;
+    text-align: center;
+    width: 70px;
+    font: italic 10px black;
+    padding: 0 10px;
     line-height: 40px;
-    margin-left: 60px;
+}
+
+.short .short-title {
+    margin-left: 20px;
+    line-height: 40px;
 }

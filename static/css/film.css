@@ -11,6 +11,7 @@
 .film-main {
     padding: 40px;
     background: #dddddd;
+    box-shadow: 0px 0px 5px rgba(150, 150, 150, 0.7);
 }
 
 .film-title {

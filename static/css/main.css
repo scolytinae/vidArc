@@ -2,14 +2,22 @@
     /*border: 1px solid darkred;
 */}
 
+body {
+    background: #f8f8f8;
+}
+
 .box {
     width: 680px;
     margin: 20px auto;
+    color: rgba(0, 0, 0, .9);
 }
 
 header {
     margin-top: 20px;
-    height: 100px;
+}
+
+header .title{
+    font: bold 30px arial, sans-serif;
 }
 
 nav .main-menu {
@@ -30,7 +38,7 @@ nav .main-menu li:last-of-type {
 
 nav .main-menu a {
     text-decoration: none;
-    color: rgba(0, 0, 0, .9);
+    color: inherit;
 }
 
 nav .main-menu a:hover {
@@ -38,7 +46,7 @@ nav .main-menu a:hover {
 }
 
 nav .main-menu .active a {
-    text-shadow: 0px 9px 5px rgba(150, 150, 150, 0.9);
+    text-shadow: 0px 9px 5px rgba(150, 150, 150, .9);
 }
 
 nav .main-menu .a-text {
@@ -48,8 +56,9 @@ nav .main-menu .a-text {
 
 .last-updates {
     margin-top: 25px;
-    border-top: 1px solid black;
+    border-top: 1px solid;
     position: relative;
+    border-color: rgba(0, 0, 0, .5);
 }
 
 .last-updates h2 {
@@ -57,11 +66,11 @@ nav .main-menu .a-text {
     vertical-align: center;
     position: absolute;
     display: block;
-    padding: 0 10px;
+    padding: 0px 10px;
     top: -5px;
     left: 250px;
-    padding-bottom: -15px;
     margin: 0 auto;
     font-style: italic;
-    background: #ffffff;
+    color: rgba(0, 0, 0, .5);
+    background-color: #f8f8f8;
 }

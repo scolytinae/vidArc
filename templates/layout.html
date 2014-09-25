@@ -11,8 +11,8 @@
 <body>
     <div class="box">
     <header>
-        {% block header %}<h1>VidArc - это удобно!</h1>
-        <p>Этот инструмент помогает систематизировать домашнюю коллекцию музыки и фильмов. Также
+        {% block header %}<h1 class="title">VidArc - это удобно!</h1>
+        <p class="promo">Этот инструмент помогает систематизировать домашнюю коллекцию музыки и фильмов. Также
             некоторым образом автоматизирует процесс скачивания фильмов и музыки с ряда сайтов.</p>
         {% endblock %}
     </header>
@@ -25,11 +25,11 @@
         ] %}
 
         <ul class="main-menu">
-            {% for href, id, caption in navigation_bar %}
+            {% for href, id, caption in navigation_bar -%}
                 <li {% if id == active_page %} class="active"{% endif %}>
                     <a href="{{ href|e }}">[<span class="a-text">{{ caption|e }}</span>]</a>
                 </li>
-            {% endfor %}
+            {%- endfor %}
         </ul>
     </nav>
     <main>{% block body %}{% endblock %}</main>
