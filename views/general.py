@@ -12,6 +12,7 @@ FILMS = [
 
 
 @mod.route("/")
+@mod.route("/index")
 def index():
     return render_template("general/index.html", items=FILMS)
 
