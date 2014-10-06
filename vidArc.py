@@ -11,6 +11,7 @@ app.config.from_object("siteconfig")
 db = SQLAlchemy(app)
 torrent_server = TorrentServer(app, db)
 
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template("404.html"), 404
