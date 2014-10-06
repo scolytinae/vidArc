@@ -18,7 +18,7 @@ class TorrentServer:
             self._load_from_db(db)
 
     def _load_from_db(self, db):
-        for db.f
+        pass
 
     def add(self, torrent_path, file_path):
         if torrent_path in self.handlers:
