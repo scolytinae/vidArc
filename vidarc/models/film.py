@@ -1,5 +1,5 @@
-from vidArc import db
-from general import BaseItem, types
+from __init__ import db
+from vidarc.models.general import BaseItem, types
 
 
 class Film(BaseItem):

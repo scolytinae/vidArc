@@ -1,11 +1,10 @@
-from vidArc import db
+from __init__ import db
 
 types = {
     'NONE': 0,
     'FILM': 1,
     'AUDIO_ALBUM': 2,
-    'AUDIO': 3,
-    'PHOTO_ALBUM': 4
+    'AUDIO': 3
 }
 
 

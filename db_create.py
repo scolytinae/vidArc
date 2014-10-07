@@ -1,9 +1,12 @@
-#!flask/bin/python
+#!/usr/bin/env python
+import os.path
+
 from migrate.versioning import api
+
 from siteconfig import SQLALCHEMY_DATABASE_URI
 from siteconfig import SQLALCHEMY_MIGRATE_REPO
-from vidArc import db
-import os.path
+from vidarc import db
+
 db.create_all()
 if not os.path.exists(SQLALCHEMY_MIGRATE_REPO):
     api.create(SQLALCHEMY_MIGRATE_REPO, 'database repository')

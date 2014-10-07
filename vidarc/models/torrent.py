@@ -1,4 +1,4 @@
-from vidArc import db
+from __init__ import db
 
 
 class TorrentFile(db.Model):
