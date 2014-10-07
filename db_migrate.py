@@ -4,8 +4,8 @@ import imp
 from migrate.versioning import api
 
 from vidarc import db
-from siteconfig import SQLALCHEMY_DATABASE_URI
-from siteconfig import SQLALCHEMY_MIGRATE_REPO
+from config.default import SQLALCHEMY_DATABASE_URI
+from config.default import SQLALCHEMY_MIGRATE_REPO
 
 
 migration = SQLALCHEMY_MIGRATE_REPO + '/versions/%03d_migration.py' % (api.db_version(SQLALCHEMY_DATABASE_URI,

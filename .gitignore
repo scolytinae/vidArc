@@ -1,4 +1,6 @@
 *.pyc
-app.db
+*.db
+*.log
 db_repository
+instance/config.py
 tmp/*

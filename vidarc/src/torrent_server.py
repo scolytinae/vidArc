@@ -1,7 +1,5 @@
 import libtorrent as lt
 
-DEFAULT_PORTS = (6881, 6891)
-
 
 class TorrentServer:
 
@@ -9,9 +7,7 @@ class TorrentServer:
 
     def __init__(self, app, db=None):
         self.sess = lt.session()
-        min_port, max_port = DEFAULT_PORTS
-        if 'TORRENT_PORTS' in app.config:
-            min_port, max_port = app.config['TORRENT_PORTS']
+        min_port, max_port = app.config['TORRENT_PORTS']
         self.sess.listen_on(min_port, max_port)
 
         if db:

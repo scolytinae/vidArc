@@ -1,0 +1,4 @@
+DEBUG = True
+
+LOG_FILE_NAME = ''
+LOG_MAIL_SERVER = ''
