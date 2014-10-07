@@ -16,4 +16,6 @@ TMP_DIR = os.path.join(_basedir, 'tmp/')
 LOG_FILE_NAME = os.path.join(TMP_DIR, 'vidarc.log')
 LOG_MAIL_SERVER = ''
 
+CSRF_ENABLED = True
+
 del os

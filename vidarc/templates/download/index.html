@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% set active_page = "download" %}
+
+{% block body %}
+    <form action="" method="post" name="login">
+        {{ form.hidden_tag() }}
+        <p>
+            <span>Введите адрес файла или страницы</span><br>
+            {{ form.address(size=60) }}
+            <input type="submit" value="Скачать">
+        </p>
+        {% for error in form.errors.address %}
+        <span class="error">{{ error }}</span>
+        {% endfor %}
+    </form>
+{% endblock %}
