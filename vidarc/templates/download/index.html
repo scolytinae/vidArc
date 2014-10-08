@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% set active_page = "download" %}
 
+{% block head %}
+    {{ super() }}
+    <script data-main="{{ url_for('static', filename='js/downloadPage.js') }}" src="{{ url_for('static', filename='js/lib/require.js') }}"></script>
+{% endblock %}
+
 {% block body %}
     <form action="" method="post" name="login">
         {{ form.hidden_tag() }}
