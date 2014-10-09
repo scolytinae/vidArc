@@ -1,5 +1,5 @@
 #--* coding: utf-8 *--
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, abort
 
 mod = Blueprint("general", __name__)
 
@@ -17,11 +17,23 @@ def index():
     return render_template("general/index.html", items=FILMS)
 
 
+@mod.route("/music")
+def music_list():
+    return render_template("general/music_list.html", album_list=[])
+
+
+@mod.route("/music/<int:id>")
+def music(id):
+    #just a stub
+    abort(404)
+    return render_template("general/music.html", album=[])
+
+
 @mod.route("/films")
 def film_list():
-    return render_template("general/film_list.html", films=FILMS)
+    return render_template("general/film_list.html", film_list=FILMS)
 
 
-@mod.route("/films/<string:film_page>")
-def film(film_page):
-    return render_template("general/film.html", film=FILMS[0])
+@mod.route("/films/<int:id>")
+def film(id):
+    return render_template("general/film.html", film=FILMS[id])

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% import "general/macros.html" as m %}
+{% set active_page="music" %}
+
+{% block head %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/music.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body%}
+    {% for album in album_list %}
+        {{ m.music(album) }}
+    {% endfor %}
+{% endblock %}

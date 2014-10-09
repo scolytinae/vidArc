@@ -14,6 +14,22 @@
     </article>
 {% endmacro %}
 
+{% macro music(m) %}
+    <article class="music">
+        <h3 class="music-title">{{ m.title }}</h3>
+        <div class="music-main clear-fix">
+            <figure class="music-poster"><img src="" width="90" height="90" alt="poster"></figure>
+            <ul class="music-info">
+                <li class="music-info-item"><span class="music-info-key">Автор: </span><span class="music-info-value">{{ f.author }}</span></li>
+                <li class="music-info-item"><span class="music-info-key">Год: </span><span class="music-info-value">{{ f.year }}</span></li>
+            </ul>
+            <section class="song-list">
+                <span></span>
+            </section>
+        </div>
+    </article>
+{% endmacro %}
+
 {% macro short(item) %}
     <a class="short" href="{{ item.href }}">
         <span class="short-type">{{ item.type }}</span>
