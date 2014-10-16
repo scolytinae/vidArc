@@ -4,7 +4,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 from src.torrent_server import TorrentServer
 from src.loggers import add_loggers
-from views import general, download
+from views import general, download, api
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('config.default')
@@ -23,3 +23,4 @@ def not_found(error):
 
 app.register_blueprint(general.mod)
 app.register_blueprint(download.mod)
+app.register_blueprint(api.mod)

@@ -1,3 +1,5 @@
 define(function(require) {
-   console.log("hello, I'm requirejs");
+   function FreshBox(options) {
+       this.xhr = new XMLHttpRequest();
+   }
 });
