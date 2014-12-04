@@ -2,7 +2,8 @@
 {% set active_page = "download" %}
 
 {% block body %}
-    <form action="" method="post" name="login">
+
+    <form id="download-form" action="" method="post" name="login">
         {{ form.hidden_tag() }}
         <p>
             <span>Введите адрес файла или страницы</span><br>
@@ -13,6 +14,13 @@
         <span class="error">{{ error }}</span>
         {% endfor %}
     </form>
+
+    <ul id="download-list"></ul>
+
+    <script type="text/template" id="download-list-item">
+        <li class="download-list-item"><%-type%> - <%-title%>
+        <button class="stop-download"></button></li>
+    </script>
 
     <script data-main="{{ url_for('static', filename='js/downloadPage.js') }}" src="{{ url_for('static', filename='js/lib/require.js') }}"></script>
 {% endblock %}

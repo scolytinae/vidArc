@@ -2,30 +2,50 @@ from flask import Blueprint
 from flask import jsonify
 from flask import request
 
+import time
+
 DOWNLOADS = [
     {
         'id': 1,
         'title': 'hello1',
-        'done': False
+        'done': False,
+        'cmd': 'add'
     },
     {
         'id': 2,
         'title': 'hello2',
-        'done': False
+        'done': False,
+        'cmd': 'add'
     }
 ]
 
 mod = Blueprint("api", __name__)
 
-@mod.route('/api/downloads-long', methods=['GET'])
 @mod.route('/api/downloads', methods=['GET', 'POST', 'DELETE'])
 def get_downloads():
+    if request.method == 'GET':
+        if request.args.get('type', '') == 'full':
+            return jsonify({'data': get_downloads()})
+
+        return jsonify({'data': wait_downloads()})
+
     if request.method == 'POST':
         add_download_item()
-    elif request.method == 'DELETE':
+
+    if request.method == 'DELETE':
         delete_download_item()
-    else:
-        return jsonify({'downloads': DOWNLOADS})
+
+
+def get_downloads():
+    return DOWNLOADS
+
+
+def wait_downloads():
+    return []
+
+
+def update_downloads():
+    pass
 
 
 def delete_download_item():
