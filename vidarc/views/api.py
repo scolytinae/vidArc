@@ -9,13 +9,13 @@ DOWNLOADS = [
         'id': 1,
         'title': 'hello1',
         'done': False,
-        'cmd': 'add'
+        'state': 'active'
     },
     {
         'id': 2,
         'title': 'hello2',
         'done': False,
-        'cmd': 'add'
+        'state': 'active'
     }
 ]
 

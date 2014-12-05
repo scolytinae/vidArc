@@ -2,20 +2,23 @@
 {% set active_page = "download" %}
 
 {% block body %}
+    <div id="download-widget">
+        <form id="download-form" action="" method="post" name="login">
+            {{ form.hidden_tag() }}
+            <p>
+                <span>Введите адрес файла или страницы</span><br>
+                {{ form.address(size=60) }}
+                <input type="submit" value="Скачать">
+            </p>
+            <div class="download-errors"></div>
+        </form>
 
-    <form id="download-form" action="" method="post" name="login">
-        {{ form.hidden_tag() }}
-        <p>
-            <span>Введите адрес файла или страницы</span><br>
-            {{ form.address(size=60) }}
-            <input type="submit" value="Скачать">
-        </p>
-        {% for error in form.errors.address %}
-        <span class="error">{{ error }}</span>
-        {% endfor %}
-    </form>
+        <ul id="download-list"></ul>
+    </div>
 
-    <ul id="download-list"></ul>
+    <script type="text/template" id="download-errors-item">
+        <span> <%-error%> </span>
+    </script>
 
     <script type="text/template" id="download-list-item">
         <li class="download-list-item"><%-type%> - <%-title%>
